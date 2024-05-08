@@ -55,8 +55,8 @@ const Feature = () => {
           </h1>
           <div className="flex space-x-3">
             <div className="h-3 w-3 bg-[#2da950] rounded-full"></div>
-            <div className="h-3 w-3 bg-[#e4e3e3] rounded-full"></div>
-            <div className="h-3 w-3 bg-[#e4e3e3] rounded-full"></div>
+            <div className="h-3 w-3 bg-[#e4e3e3] hover:bg-[#cad0cb] rounded-full"></div>
+            <div className="h-3 w-3 bg-[#e4e3e3] hover:bg-[#cad0cb] rounded-full"></div>
           </div>
         </div>
 

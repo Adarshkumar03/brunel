@@ -1,5 +1,4 @@
 import union from "../assets/Union.svg";
-import { useState } from "react";
 import Accordion from "./Accordian";
 
 const questions = [
@@ -11,7 +10,7 @@ const questions = [
   {
     id: 2,
     ques: "What's the guarantee that I will be satisfied with the hired talent?",
-    ans: "The only guarantee is death!!",
+    ans: "There is guarantee",
   },
   {
     id: 3,
@@ -21,7 +20,7 @@ const questions = [
   {
     id: 4,
     ques: "Why should I not go to an agency directly?",
-    ans: "Because I am telling you to!!",
+    ans: "Working directly with a company can give you greater control over your application and how you present yourself to the hiring manager. You might have access to a wider range of job opportunities by searching independently instead of relying solely on an agency's network.",
   },
   {
     id: 5,
