@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <div
       id="footer"
-      className="p-10 m-5 bg-[#f5f5f5] rounded-3xl flex justify-between"
+      className="p-12 m-5 mt-10 bg-[#f5f5f5] rounded-3xl flex justify-between"
     >
       <div className="text-xl flex">
         <p className="text-3xl font-medium mr-3 -mt-1">&copy;</p>

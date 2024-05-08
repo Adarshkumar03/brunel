@@ -1,5 +1,6 @@
 import logo from "../assets/Vector.svg";
 import close from "../assets/Close.svg";
+import badge from "../assets/Badges.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -21,7 +22,6 @@ export default function Registration() {
   const handleSubmit = () => {
     if (!validateEmail(email)) {
       setEmailError("Enter valid email");
-      setEmail("");
     } else {
       navigate("/success");
     }
@@ -47,31 +47,37 @@ export default function Registration() {
         <p className="covered-by-your-grace-regular text-4xl text-green-600 mb-3">
           Registration Form
         </p>
-        <h1 className="text-6xl w-1/3 mb-10 text-center font-medium">
+        <h2 className="text-[3.5rem] w-1/3 mb-16 text-center font-semibold leading-[4rem]">
           Start your success journey here!
-        </h1>
-        <div className="flex flex-col">
+        </h2>
+        <div className="flex flex-col w-1/3">
           <input
             type="name"
             placeholder="Enter your name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="p-5 text-2xl bg-gray-200 rounded-full"
+            className="py-5 px-7 text-2xl bg-[#efefef] rounded-full w-3/4 mr-auto ml-auto mb-5 focus:outline-none focus:bg-[#f5f8ff] focus:border focus:border-blue-400"
           />
           <input
             type="email"
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            className="p-5 text-2xl bg-[#efefef] rounded-full w-3/4 mr-auto ml-auto mb-7 focus:outline-none focus:bg-[#f5f8ff] focus:border focus:border-blue-400"
           />
-          {emailError && <p className="text-red-500">{emailError}</p>}
+          {emailError && (
+            <p className="text-red-500 -mt-5 mb-6 flex ml-16">
+              <img src={badge} />
+              {emailError}
+            </p>
+          )}
           <button
             onClick={handleSubmit}
-            disabled={name.trim() === "" || email.trim() === ""}
-            className={`w-1/3 p-5 rounded-full text-2xl ${
+            disabled={isAnyEmpty()}
+            className={`w-3/4 p-5 rounded-full text-lg text-white ml-auto mr-auto ${
               isAnyEmpty()
-                ? "bg-gray-300 cursor-not-allowed"
-                : "bg-black text-white"
+                ? "bg-[#c9c9c9] cursor-not-allowed"
+                : "bg-[#1c1c1c] hover:bg-[#4e4e4e] text-white"
             }`}
           >
             Submit
