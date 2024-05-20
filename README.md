@@ -1,4 +1,5 @@
-# Brune
+# Brunel
+Brunel is a frontend project that has a landing page, a registration page and a confirmation page.
 
 ## Technologies
 
